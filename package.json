@@ -1,0 +1,22 @@
+{
+  "name": "api-gol",
+  "version": "1.0.0",
+  "description": "API de Gestión de Órdenes de Logística",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.18.0",
+    "mongodb": "^6.12.0",
+    "mongoose": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}
