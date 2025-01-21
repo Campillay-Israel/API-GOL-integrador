@@ -1,5 +1,5 @@
 // app.js
-
+require ('dotenv').config();
 const express = require('express');
 const connectDB = require('./config/db');
 const ordenesRoutes = require('./routes/ordenes');
@@ -13,11 +13,12 @@ connectDB();
 app.use(express.json());
 
 // Rutas
-app.use('/ordenes', ordenesRoutes);
+app.use('/api/ordenes', ordenesRoutes);
 
-// Puerto de escucha
-const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
+
+//app.listen(PORT, () => {
+//  console.log(`Servidor escuchando en el puerto ${PORT}`);
+//});
+
+module.exports = app;
