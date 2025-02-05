@@ -1,22 +1,24 @@
-// app.js
-require ('dotenv').config();
+require('dotenv').config();
 const express = require('express');
+const cors = require('cors'); // <-- Importa cors
 const connectDB = require('./config/db');
 const ordenesRoutes = require('./routes/ordenes');
 
 const app = express();
 
-// Conectar a la base de datos
+
 connectDB();
 
-// Middleware para parsear JSON
+// Habilitar CORS
+app.use(cors());
+
+
 app.use(express.json());
 
 // Rutas
 app.use('/api/ordenes', ordenesRoutes);
 
-
-
+//const PORT = process.env.PORT || 3000;
 //app.listen(PORT, () => {
 //  console.log(`Servidor escuchando en el puerto ${PORT}`);
 //});
